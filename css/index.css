@@ -45,7 +45,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     /* 为了抵消每个 figure 左右的 margin，容器左右设置负 margin */
-    margin: 0 -2px;
+    margin: 0;
 }
 
 .tattoo-gallery figure {
