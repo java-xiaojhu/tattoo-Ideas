@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #222;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    margin: 40px 0;
+}
+
+.tattoo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    /* 为了抵消每个 figure 左右的 margin，容器左右设置负 margin */
+    margin: 0 -2px;
+}
+
+.tattoo-gallery figure {
+    /* 每个 figure 宽度为 33.33%，减去左右边距共 4px */
+    flex: 1 1 calc(33.33% - 4px);
+    box-sizing: border-box;
+    /* 左右各 2px，下方可加适当间距 */
+    margin: 0 2px 20px;
+}
+
+/* 确保 h2 和 p 元素也居中 */
+.tattoo-category h2,
+.tattoo-category p {
+    margin: 0;
+    text-align: center; /* 居中标题和段落文字 */
+}
+
+
+.tattoo-gallery figure img {
+    width: 100%;
+    aspect-ratio: 1; /* 保持正方形比例 */
+    object-fit: cover; /* 填充容器，避免图片失真 */
+    display: block;
+}
+
+.tattoo-gallery figure {
+    flex: 1 1 calc(33.33% - 4px);
+    box-sizing: border-box;
+    margin: 0 2px 20px;
+    display: flex;
+    flex-direction: column; /* 让图片和文字垂直排列 */
+    align-items: center; /* 水平居中 */
+}
+
+.tattoo-gallery figure img {
+    width: 100%;
+    aspect-ratio: 1; /* 保持正方形比例 */
+    object-fit: cover; /* 填充容器，避免图片失真 */
+    display: block;
+}
+
+.tattoo-gallery figure figcaption {
+    margin-top: 10px; /* 图片和文字之间的间距 */
+    text-align: center; /* 确保文字居中 */
+    font-size: 14px; /* 可选：设置文字的大小 */
+    color: #333; /* 可选：设置文字颜色 */
+}
+
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0; /* 清除默认外边距 */
+}
+
+footer .container {
+    padding-top: 10px; /* 底部文字与内容保持10px间距 */
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}

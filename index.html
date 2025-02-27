@@ -3,111 +3,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Discover creative tattoo ideas and find the perfect tattoo design for you, including popular styles, placements, and unique inspirations.">
+    <meta name="description"
+          content="Discover creative tattoo ideas and find the perfect tattoo design for you, including popular styles, placements, and unique inspirations.">
     <meta name="keywords" content="Tattoo ideas, tattoo designs, small tattoos, large tattoos, tattoo inspiration">
     <meta name="author" content="Tattoo Ideas Team">
     <title>Tattoo Ideas | Creative Tattoo Designs</title>
     <link rel="stylesheet" href="css/index.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: #222;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            margin: 40px 0;
+        }
+
+        .tattoo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            /* 为了抵消每个 figure 左右的 margin，容器左右设置负 margin */
+            margin: 0 -2px;
+        }
+
+        .tattoo-gallery figure {
+            /* 每个 figure 宽度为 33.33%，减去左右边距共 4px */
+            flex: 1 1 calc(33.33% - 4px);
+            box-sizing: border-box;
+            /* 左右各 2px，下方可加适当间距 */
+            margin: 0 2px 20px;
+        }
+
+        /* 确保 h2 和 p 元素也居中 */
+        .tattoo-category h2,
+        .tattoo-category p {
+            margin: 0;
+            text-align: center; /* 居中标题和段落文字 */
+        }
+
+
+        .tattoo-gallery figure img {
+            width: 100%;
+            aspect-ratio: 1; /* 保持正方形比例 */
+            object-fit: cover; /* 填充容器，避免图片失真 */
+            display: block;
+        }
+
+        .tattoo-gallery figure {
+            flex: 1 1 calc(33.33% - 4px);
+            box-sizing: border-box;
+            margin: 0 2px 20px;
+            display: flex;
+            flex-direction: column; /* 让图片和文字垂直排列 */
+            align-items: center; /* 水平居中 */
+        }
+
+        .tattoo-gallery figure img {
+            width: 100%;
+            aspect-ratio: 1; /* 保持正方形比例 */
+            object-fit: cover; /* 填充容器，避免图片失真 */
+            display: block;
+        }
+
+        .tattoo-gallery figure figcaption {
+            margin-top: 10px; /* 图片和文字之间的间距 */
+            text-align: center; /* 确保文字居中 */
+            font-size: 14px; /* 可选：设置文字的大小 */
+            color: #333; /* 可选：设置文字颜色 */
+        }
+
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0; /* 清除默认外边距 */
+        }
+
+        footer .container {
+            padding-top: 10px; /* 底部文字与内容保持10px间距 */
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <h1>Tattoo Ideas</h1>
-            <p>Explore unique tattoo designs and find inspiration for your next ink!</p>
-            <nav>
-                <ul>
-                    <li><a href="#popular">Popular Tattoos</a></li>
-                    <li><a href="#small-tattoos">Small Tattoos</a></li>
-                    <li><a href="#large-tattoos">Large Tattoos</a></li>
-<!--                    <li><a href="#gallery">Gallery</a></li>-->
-                </ul>
-            </nav>
+<!-- Header -->
+<header>
+    <div class="container">
+        <h1>Tattoo Ideas</h1>
+        <p>Explore unique tattoo designs and find inspiration for your next ink!</p>
+        <nav>
+            <ul>
+                <li><a href="#popular">Popular Tattoos</a></li>
+                <li><a href="#small-tattoos">Small Tattoos</a></li>
+                <li><a href="#large-tattoos">Large Tattoos</a></li>
+                <!--                    <li><a href="#gallery">Gallery</a></li>-->
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Main Content -->
+<main>
+    <section id="popular" class="tattoo-category">
+        <h2>Popular Tattoo Designs</h2>
+        <p>Check out the most trending tattoo designs that suit various styles and personalities.</p>
+        <div class="tattoo-gallery">
+            <figure>
+                <img src="./images/popular-1.webp" alt="Minimalist Line Tattoo">
+                <figcaption>Minimalist Line Tattoo</figcaption>
+            </figure>
+            <figure>
+                <img src="./images/popular-2.webp" alt="Geometric Tattoo">
+                <figcaption>Geometric Tattoo</figcaption>
+            </figure>
+            <figure>
+                <img src="./images/popular-3.webp" alt="Animal Tattoo">
+                <figcaption>Animal Tattoo</figcaption>
+            </figure>
         </div>
-    </header>
+    </section>
 
-    <!-- Main Content -->
-    <main>
-        <section id="popular" class="tattoo-category">
-            <h2>Popular Tattoo Designs</h2>
-            <p>Check out the most trending tattoo designs that suit various styles and personalities.</p>
-            <div class="tattoo-gallery">
-                <figure>
-                    <img src="images/popular-1.webp" alt="Minimalist Line Tattoo">
-                    <figcaption>Minimalist Line Tattoo</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/popular-2.webp" alt="Geometric Tattoo">
-                    <figcaption>Geometric Tattoo</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/popular-3.webp" alt="Animal Tattoo">
-                    <figcaption>Animal Tattoo</figcaption>
-                </figure>
-            </div>
-        </section>
-
-        <section id="small-tattoos" class="tattoo-category">
-            <h2>Small Tattoo Ideas</h2>
-            <p>Perfect for those who prefer subtle and elegant tattoo designs.</p>
-            <div class="tattoo-gallery">
-                <figure>
-                    <img src="images/small-tattoos1.jpg" alt="Star Tattoo">
-                    <figcaption>Star Tattoo</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/small-tattoo2.jpg" alt="Moon Tattoo">
-                    <figcaption>Moon Tattoo</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/small-tattoo3.jpg" alt="Letter Tattoo">
-                    <figcaption>Letter Tattoo</figcaption>
-                </figure>
-            </div>
-        </section>
-
-        <section id="large-tattoos" class="tattoo-category">
-            <h2>Large Tattoo Designs</h2>
-            <p>If you love bold and expressive tattoos, here are some striking designs for you.</p>
-            <div class="tattoo-gallery">
-                <figure>
-                    <img src="images/large-tattoo1.jpg" alt="Full Back Tattoo">
-                    <figcaption>Full Back Tattoo</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/large-tattoo2.jpg" alt="Colorful Landscape Tattoo">
-                    <figcaption>Colorful Landscape Tattoo</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/large-tattoo3.jpeg" alt="Chest Tattoo">
-                    <figcaption>Chest Tattoo</figcaption>
-                </figure>
-            </div>
-        </section>
-
-        <!-- Gallery Section -->
-        <!-- <section id="gallery">
-            <h2>More Tattoo Inspirations</h2>
-            <p>Browse through more tattoo styles and find your perfect match!</p>
-            <div class="tattoo-gallery">
-                <figure>
-                    <img src="images/creative-tattoo1.jpg" alt="Creative Tattoo 1">
-                    <figcaption>Creative Tattoo 1</figcaption>
-                </figure>
-                <figure>
-                    <img src="images/creative-tattoo2.jpg" alt="Creative Tattoo 2">
-                    <figcaption>Creative Tattoo 2</figcaption>
-                </figure>
-            </div>
-        </section> -->
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Tattoo Ideas. All Rights Reserved.</p>
-            <p>Follow us on: <a href="#">Instagram</a> | <a href="#">Facebook</a></p>
+    <section id="small-tattoos" class="tattoo-category">
+        <h2>Small Tattoo Ideas</h2>
+        <p>Perfect for those who prefer subtle and elegant tattoo designs.</p>
+        <div class="tattoo-gallery">
+            <figure>
+                <img src="./images/small-tattoos1.jpg" alt="Star Tattoo">
+                <figcaption>Star Tattoo</figcaption>
+            </figure>
+            <figure>
+                <img src="./images/small-tattoo2.jpg" alt="Moon Tattoo">
+                <figcaption>Moon Tattoo</figcaption>
+            </figure>
+            <figure>
+                <img src="./images/small-tattoo3.jpg" alt="Letter Tattoo">
+                <figcaption>Letter Tattoo</figcaption>
+            </figure>
         </div>
-    </footer>
+    </section>
+
+    <section id="large-tattoos" class="tattoo-category">
+        <h2>Large Tattoo Designs</h2>
+        <p>If you love bold and expressive tattoos, here are some striking designs for you.</p>
+        <div class="tattoo-gallery">
+            <figure>
+                <img src="./images/large-tattoo1.jpg" alt="Full Back Tattoo">
+                <figcaption>Full Back Tattoo</figcaption>
+            </figure>
+            <figure>
+                <img src="./images/large-tattoo2.jpg" alt="Colorful Landscape Tattoo">
+                <figcaption>Colorful Landscape Tattoo</figcaption>
+            </figure>
+            <figure>
+                <img src="./images/large-tattoo3.jpeg" alt="Chest Tattoo">
+                <figcaption>Chest Tattoo</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <!-- <section id="gallery">
+        <h2>More Tattoo Inspirations</h2>
+        <p>Browse through more tattoo styles and find your perfect match!</p>
+        <div class="tattoo-gallery">
+            <figure>
+                <img src="./images/creative-tattoo1.jpg" alt="Creative Tattoo 1">
+                <figcaption>Creative Tattoo 1</figcaption>
+            </figure>
+            <figure>
+                <img src="./images/creative-tattoo2.jpg" alt="Creative Tattoo 2">
+                <figcaption>Creative Tattoo 2</figcaption>
+            </figure>
+        </div>
+    </section> -->
+</main>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p>&copy; 2025 Tattoo Ideas. All Rights Reserved.</p>
+        <p>Follow us on: <a href="#">Instagram</a> | <a href="#">Facebook</a></p>
+    </div>
+</footer>
 </body>
 </html>
